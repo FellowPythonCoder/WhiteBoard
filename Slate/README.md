@@ -6,15 +6,6 @@ Slate is engineered from first principles with zero third-party dependencies, ze
 
 ---
 
-## Deliverables in this Repository
-
-- **`Slate.dmg`**: Complete macOS Disk Image containing `Slate.app` and `/Applications` alias.
-- **`Slate/Slate.xcodeproj`**: Full Xcode project with Swift 6, AppKit + Metal canvas, SwiftUI chrome, and XCTest suite.
-- **`Slate/Slate/`**: Complete native source tree (Model, Canvas, Metal Shaders, Persistence, Camera Tracking, Text to Guide, UI, Export).
-- **`Slate/SlateTests/`**: Complete unit test suite (Model, Parser, Gesture State Machine, Persistence, Snapping).
-
----
-
 ## Key Highlights
 
 - **120fps Metal Canvas**: Sub-10ms input-to-ink latency, ProMotion 120Hz support, tiled spatial indexing cache (`TileCache`) capable of rendering 10,000+ vector strokes without frame drops.
@@ -23,6 +14,99 @@ Slate is engineered from first principles with zero third-party dependencies, ze
 - **Text to Visual Guide Engine (Zero AI)**: Deterministic markdown/text parser converting outlines, steps, comparisons (`vs`), directional flows (`->`), and dates into fully editable Flowcharts, Mind Maps, Step Cards, Timelines, Checklists, and Comparison Tables.
 - **Step-by-Step Presentation Mode**: Organize canvas frames/sections into presentation slides with smooth full-screen presentation navigation and a live glowing laser pointer trail.
 - **Local Document Package Format (`.slate`)**: Stored as Finder packages with JSON schemas, snapshot history checkpoints, and embedded assets. Instant launch under 400ms.
+
+---
+
+## Project Structure
+
+```
+Slate/
+├── Slate.xcodeproj/                  # Xcode Project
+│   ├── project.pbxproj
+│   └── xcshareddata/xcschemes/Slate.xcscheme
+├── Slate/
+│   ├── App/
+│   │   ├── SlateApp.swift            # SwiftUI App lifecycle & AppKit AppDelegate
+│   │   └── MenuCommands.swift        # Native macOS AppKit menu bar commands
+│   ├── Model/
+│   │   ├── SlateDocument.swift       # Document schema, metadata, canvas bounds
+│   │   ├── CanvasElement.swift       # Polymorphic vector element model
+│   │   ├── Stroke.swift              # Pressure-sensitive ink stroke with pixel splitting
+│   │   ├── ShapeElement.swift        # Rect, Ellipse, Line, Arrow, Diamond, Triangle
+│   │   ├── TextElement.swift         # Rich text formatting & typography
+│   │   ├── StickyNoteElement.swift   # Pastel sticky notes with folded corners
+│   │   ├── ConnectorElement.swift    # Smart dynamic connectors (orthogonal, curved)
+│   │   ├── FrameElement.swift        # Section & presentation slide containers
+│   │   ├── ImageElement.swift        # Bitmap image drop-in support
+│   │   ├── LaserPoint.swift          # Transient glowing laser trail
+│   │   ├── Point2D.swift             # High-precision SIMD-compatible point
+│   │   ├── ColorData.swift           # Restrained RGBA color representations
+│   │   ├── BoardMetadata.swift       # Fast indexing & favorites metadata
+│   │   └── Snapshot.swift            # Document version checkpoints
+│   ├── Persistence/
+│   │   ├── SlatePackage.swift        # .slate document package encoder/decoder
+│   │   ├── DocumentStore.swift       # Local board manager & search indexer
+│   │   └── AutosaveManager.swift     # Debounced (300ms) non-blocking autosave
+│   ├── Undo/
+│   │   ├── UndoCommand.swift         # Command pattern (Add, Remove, Move, Modify)
+│   │   └── UndoManagerEngine.swift   # Unlimited undo/redo stack
+│   ├── Canvas/
+│   │   ├── Metal/
+│   │   │   ├── Shaders.metal         # Metal vertex/fragment shaders (ink, grid, laser)
+│   │   │   ├── StrokeTessellator.swift # Catmull-Rom smoothing & triangle mesh extrusion
+│   │   │   ├── TileCache.swift       # 512x512 spatial tile index
+│   │   │   ├── MetalRenderer.swift   # MTKViewDelegate triple-buffered renderer
+│   │   │   └── MetalCanvasView.swift # Native MTKView subclass
+│   │   ├── AppKitCanvas/
+│   │   │   ├── SlateCanvasNSView.swift # AppKit canvas view, gestures, overlays
+│   │   │   ├── CanvasCoordinateTransform.swift # Viewport pan/zoom transforms
+│   │   │   └── CanvasInputHandler.swift # Tablet pressure, hold-to-snap timer
+│   │   ├── AlignmentEngine.swift     # Smart alignment guides & object snapping
+│   │   ├── GeometrySnapper.swift     # Rule-based geometric shape recognition
+│   │   ├── OneEuroFilter.swift       # Adaptive jitter filter
+│   │   ├── MinimapView.swift         # Interactive board minimap
+│   │   └── RulersView.swift          # Coordinate point rulers
+│   ├── Tools/
+│   │   └── CanvasTool.swift          # All 20 canvas tools & shortcuts
+│   ├── TextToVisualGuide/
+│   │   ├── TextGuideParser.swift     # Deterministic markdown/text outline parser
+│   │   ├── GuideLayoutEngine.swift   # Flowchart, Mindmap, StepCards, Timeline, Checklist
+│   │   └── PresentationManager.swift # Slide ordering & presentation mode
+│   ├── CameraTracking/
+│   │   ├── CameraTrackingProtocol.swift
+│   │   ├── HSVColorFilter.swift      # Accelerate/SIMD RGB-to-HSV color mask
+│   │   ├── BlobDetector.swift        # Two-pass connected components labeling
+│   │   ├── GestureStateMachine.swift # 2-blob DRAW, 1-blob ERASE, 0-blob HOVER
+│   │   ├── CameraCalibration.swift   # Presets (Green, Orange, Blue, Custom)
+│   │   ├── CameraManager.swift       # AVFoundation capture pipeline
+│   │   └── CameraPiPView.swift       # Picture-in-Picture preview & status badge
+│   ├── Export/
+│   │   ├── PNGExporter.swift         # High-DPI 2x/3x raster export
+│   │   ├── PDFExporter.swift         # Vector PDF export
+│   │   ├── SVGExporter.swift         # Scalable SVG 1.1 export
+│   │   └── ClipboardManager.swift    # Copy PNG/SVG to clipboard
+│   ├── UI/
+│   │   ├── StyleConstants.swift      # Design tokens (8pt grid, hairline, shadows)
+│   │   ├── MainView.swift            # Root SwiftUI view
+│   │   ├── FloatingToolbar.swift     # Minimal pill toolbar with auto-fade
+│   │   ├── InspectorPanel.swift      # Contextual selection inspector
+│   │   ├── CommandPalette.swift      # ⌘K instant search palette
+│   │   ├── BoardLibraryView.swift    # Thumbnail card grid & search
+│   │   ├── SnapshotHistoryView.swift # Version snapshots timeline
+│   │   ├── CameraSettingsModal.swift # Calibration wizard & tolerance sliders
+│   │   ├── KeyboardCheatSheetModal.swift # Shortcut reference cheat sheet
+│   │   └── PresentationOverlayView.swift # Presentation mode controls
+│   └── Resources/
+│       ├── Info.plist                # Sandboxed bundle configuration & UTIs
+│       ├── Slate.entitlements        # Camera entitlement only (Zero network)
+│       └── Assets.xcassets           # AppIcon & AccentColor tokens
+└── SlateTests/
+    ├── ModelTests.swift              # Serialization & element math tests
+    ├── ParserTests.swift             # Deterministic outline parser tests
+    ├── GestureStateMachineTests.swift # 2-blob draw, erase, hysteresis tests
+    ├── PersistenceTests.swift        # Package bundle read/write tests
+    └── SnappingTests.swift           # Circle, rectangle, line snapping tests
+```
 
 ---
 
@@ -135,7 +219,7 @@ To use camera finger tracking without ML:
 
 ### Open in Xcode
 ```bash
-open Slate/Slate.xcodeproj
+open Slate.xcodeproj
 ```
 Select the `Slate` scheme and press **⌘R** to build and run, or **⌘U** to run the unit test suite.
 

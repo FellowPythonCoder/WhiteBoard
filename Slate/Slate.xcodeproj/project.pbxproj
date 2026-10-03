@@ -1,0 +1,761 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1001 /* SlateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2001 /* SlateApp.swift */; };
+		1002 /* MenuCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2002 /* MenuCommands.swift */; };
+		1003 /* Point2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2003 /* Point2D.swift */; };
+		1004 /* ColorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2004 /* ColorData.swift */; };
+		1005 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005 /* Stroke.swift */; };
+		1006 /* ShapeElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006 /* ShapeElement.swift */; };
+		1007 /* TextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2007 /* TextElement.swift */; };
+		1008 /* StickyNoteElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2008 /* StickyNoteElement.swift */; };
+		1009 /* ConnectorElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2009 /* ConnectorElement.swift */; };
+		1010 /* FrameElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2010 /* FrameElement.swift */; };
+		1011 /* ImageElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011 /* ImageElement.swift */; };
+		1012 /* LaserPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2012 /* LaserPoint.swift */; };
+		1013 /* CanvasElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2013 /* CanvasElement.swift */; };
+		1014 /* BoardMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2014 /* BoardMetadata.swift */; };
+		1015 /* Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2015 /* Snapshot.swift */; };
+		1016 /* SlateDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2016 /* SlateDocument.swift */; };
+		1017 /* SlatePackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2017 /* SlatePackage.swift */; };
+		1018 /* DocumentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2018 /* DocumentStore.swift */; };
+		1019 /* AutosaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2019 /* AutosaveManager.swift */; };
+		1020 /* UndoCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020 /* UndoCommand.swift */; };
+		1021 /* UndoManagerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2021 /* UndoManagerEngine.swift */; };
+		1022 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 2022 /* Shaders.metal */; };
+		1023 /* StrokeTessellator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2023 /* StrokeTessellator.swift */; };
+		1024 /* TileCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2024 /* TileCache.swift */; };
+		1025 /* MetalRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2025 /* MetalRenderer.swift */; };
+		1026 /* MetalCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2026 /* MetalCanvasView.swift */; };
+		1027 /* CanvasCoordinateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2027 /* CanvasCoordinateTransform.swift */; };
+		1028 /* OneEuroFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2028 /* OneEuroFilter.swift */; };
+		1029 /* GeometrySnapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029 /* GeometrySnapper.swift */; };
+		1030 /* AlignmentEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030 /* AlignmentEngine.swift */; };
+		1031 /* CanvasInputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2031 /* CanvasInputHandler.swift */; };
+		1032 /* SlateCanvasNSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032 /* SlateCanvasNSView.swift */; };
+		1033 /* MinimapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033 /* MinimapView.swift */; };
+		1034 /* RulersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2034 /* RulersView.swift */; };
+		1035 /* CanvasTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2035 /* CanvasTool.swift */; };
+		1036 /* TextGuideParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2036 /* TextGuideParser.swift */; };
+		1037 /* GuideLayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2037 /* GuideLayoutEngine.swift */; };
+		1038 /* PresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2038 /* PresentationManager.swift */; };
+		1039 /* CameraTrackingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2039 /* CameraTrackingProtocol.swift */; };
+		1040 /* HSVColorFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040 /* HSVColorFilter.swift */; };
+		1041 /* BlobDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2041 /* BlobDetector.swift */; };
+		1042 /* GestureStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042 /* GestureStateMachine.swift */; };
+		1043 /* CameraCalibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2043 /* CameraCalibration.swift */; };
+		1044 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2044 /* CameraManager.swift */; };
+		1045 /* CameraPiPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2045 /* CameraPiPView.swift */; };
+		1046 /* PNGExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2046 /* PNGExporter.swift */; };
+		1047 /* PDFExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2047 /* PDFExporter.swift */; };
+		1048 /* SVGExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2048 /* SVGExporter.swift */; };
+		1049 /* ClipboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2049 /* ClipboardManager.swift */; };
+		1050 /* StyleConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2050 /* StyleConstants.swift */; };
+		1051 /* FloatingToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2051 /* FloatingToolbar.swift */; };
+		1052 /* InspectorPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2052 /* InspectorPanel.swift */; };
+		1053 /* CommandPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2053 /* CommandPalette.swift */; };
+		1054 /* BoardLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2054 /* BoardLibraryView.swift */; };
+		1055 /* SnapshotHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2055 /* SnapshotHistoryView.swift */; };
+		1056 /* CameraSettingsModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2056 /* CameraSettingsModal.swift */; };
+		1057 /* KeyboardCheatSheetModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057 /* KeyboardCheatSheetModal.swift */; };
+		1058 /* PresentationOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2058 /* PresentationOverlayView.swift */; };
+		1059 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2059 /* MainView.swift */; };
+		1060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2060 /* Assets.xcassets */; };
+		1061 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2061 /* ModelTests.swift */; };
+		1062 /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2062 /* ParserTests.swift */; };
+		1063 /* GestureStateMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2063 /* GestureStateMachineTests.swift */; };
+		1064 /* PersistenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2064 /* PersistenceTests.swift */; };
+		1065 /* SnappingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2065 /* SnappingTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4001 /* Slate */;
+			remoteInfo = Slate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4001 /* Slate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Slate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4002 /* SlateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2001 /* SlateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlateApp.swift; sourceTree = "<group>"; };
+		2002 /* MenuCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCommands.swift; sourceTree = "<group>"; };
+		2003 /* Point2D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point2D.swift; sourceTree = "<group>"; };
+		2004 /* ColorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorData.swift; sourceTree = "<group>"; };
+		2005 /* Stroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
+		2006 /* ShapeElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeElement.swift; sourceTree = "<group>"; };
+		2007 /* TextElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextElement.swift; sourceTree = "<group>"; };
+		2008 /* StickyNoteElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyNoteElement.swift; sourceTree = "<group>"; };
+		2009 /* ConnectorElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectorElement.swift; sourceTree = "<group>"; };
+		2010 /* FrameElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameElement.swift; sourceTree = "<group>"; };
+		2011 /* ImageElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageElement.swift; sourceTree = "<group>"; };
+		2012 /* LaserPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaserPoint.swift; sourceTree = "<group>"; };
+		2013 /* CanvasElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasElement.swift; sourceTree = "<group>"; };
+		2014 /* BoardMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardMetadata.swift; sourceTree = "<group>"; };
+		2015 /* Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapshot.swift; sourceTree = "<group>"; };
+		2016 /* SlateDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlateDocument.swift; sourceTree = "<group>"; };
+		2017 /* SlatePackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlatePackage.swift; sourceTree = "<group>"; };
+		2018 /* DocumentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentStore.swift; sourceTree = "<group>"; };
+		2019 /* AutosaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosaveManager.swift; sourceTree = "<group>"; };
+		2020 /* UndoCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoCommand.swift; sourceTree = "<group>"; };
+		2021 /* UndoManagerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoManagerEngine.swift; sourceTree = "<group>"; };
+		2022 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		2023 /* StrokeTessellator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeTessellator.swift; sourceTree = "<group>"; };
+		2024 /* TileCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileCache.swift; sourceTree = "<group>"; };
+		2025 /* MetalRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalRenderer.swift; sourceTree = "<group>"; };
+		2026 /* MetalCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalCanvasView.swift; sourceTree = "<group>"; };
+		2027 /* CanvasCoordinateTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasCoordinateTransform.swift; sourceTree = "<group>"; };
+		2028 /* OneEuroFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneEuroFilter.swift; sourceTree = "<group>"; };
+		2029 /* GeometrySnapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometrySnapper.swift; sourceTree = "<group>"; };
+		2030 /* AlignmentEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlignmentEngine.swift; sourceTree = "<group>"; };
+		2031 /* CanvasInputHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasInputHandler.swift; sourceTree = "<group>"; };
+		2032 /* SlateCanvasNSView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlateCanvasNSView.swift; sourceTree = "<group>"; };
+		2033 /* MinimapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimapView.swift; sourceTree = "<group>"; };
+		2034 /* RulersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulersView.swift; sourceTree = "<group>"; };
+		2035 /* CanvasTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasTool.swift; sourceTree = "<group>"; };
+		2036 /* TextGuideParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextGuideParser.swift; sourceTree = "<group>"; };
+		2037 /* GuideLayoutEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideLayoutEngine.swift; sourceTree = "<group>"; };
+		2038 /* PresentationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationManager.swift; sourceTree = "<group>"; };
+		2039 /* CameraTrackingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTrackingProtocol.swift; sourceTree = "<group>"; };
+		2040 /* HSVColorFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSVColorFilter.swift; sourceTree = "<group>"; };
+		2041 /* BlobDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobDetector.swift; sourceTree = "<group>"; };
+		2042 /* GestureStateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureStateMachine.swift; sourceTree = "<group>"; };
+		2043 /* CameraCalibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCalibration.swift; sourceTree = "<group>"; };
+		2044 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		2045 /* CameraPiPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPiPView.swift; sourceTree = "<group>"; };
+		2046 /* PNGExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNGExporter.swift; sourceTree = "<group>"; };
+		2047 /* PDFExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFExporter.swift; sourceTree = "<group>"; };
+		2048 /* SVGExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGExporter.swift; sourceTree = "<group>"; };
+		2049 /* ClipboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipboardManager.swift; sourceTree = "<group>"; };
+		2050 /* StyleConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConstants.swift; sourceTree = "<group>"; };
+		2051 /* FloatingToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingToolbar.swift; sourceTree = "<group>"; };
+		2052 /* InspectorPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorPanel.swift; sourceTree = "<group>"; };
+		2053 /* CommandPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandPalette.swift; sourceTree = "<group>"; };
+		2054 /* BoardLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardLibraryView.swift; sourceTree = "<group>"; };
+		2055 /* SnapshotHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHistoryView.swift; sourceTree = "<group>"; };
+		2056 /* CameraSettingsModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraSettingsModal.swift; sourceTree = "<group>"; };
+		2057 /* KeyboardCheatSheetModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardCheatSheetModal.swift; sourceTree = "<group>"; };
+		2058 /* PresentationOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationOverlayView.swift; sourceTree = "<group>"; };
+		2059 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2060 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2061 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		2062 /* ParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
+		2063 /* GestureStateMachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureStateMachineTests.swift; sourceTree = "<group>"; };
+		2064 /* PersistenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceTests.swift; sourceTree = "<group>"; };
+		2065 /* SnappingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnappingTests.swift; sourceTree = "<group>"; };
+		2066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2067 /* Slate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Slate.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0002 = {
+			isa = PBXGroup;
+			children = (
+				0003 /* Slate */,
+				0004 /* SlateTests */,
+				0005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0003 /* Slate */ = {
+			isa = PBXGroup;
+			children = (
+				0101 /* App */,
+				0102 /* Model */,
+				0103 /* Persistence */,
+				0104 /* Undo */,
+				0105 /* Canvas */,
+				0106 /* Tools */,
+				0107 /* TextToVisualGuide */,
+				0108 /* CameraTracking */,
+				0109 /* Export */,
+				0110 /* UI */,
+				0111 /* Resources */,
+			);
+			path = Slate;
+			sourceTree = "<group>";
+		};
+		0101 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2001 /* SlateApp.swift */,
+				2002 /* MenuCommands.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		0102 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2003 /* Point2D.swift */,
+				2004 /* ColorData.swift */,
+				2005 /* Stroke.swift */,
+				2006 /* ShapeElement.swift */,
+				2007 /* TextElement.swift */,
+				2008 /* StickyNoteElement.swift */,
+				2009 /* ConnectorElement.swift */,
+				2010 /* FrameElement.swift */,
+				2011 /* ImageElement.swift */,
+				2012 /* LaserPoint.swift */,
+				2013 /* CanvasElement.swift */,
+				2014 /* BoardMetadata.swift */,
+				2015 /* Snapshot.swift */,
+				2016 /* SlateDocument.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0103 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				2017 /* SlatePackage.swift */,
+				2018 /* DocumentStore.swift */,
+				2019 /* AutosaveManager.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		0104 /* Undo */ = {
+			isa = PBXGroup;
+			children = (
+				2020 /* UndoCommand.swift */,
+				2021 /* UndoManagerEngine.swift */,
+			);
+			path = Undo;
+			sourceTree = "<group>";
+		};
+		0105 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				2022 /* Shaders.metal */,
+				2023 /* StrokeTessellator.swift */,
+				2024 /* TileCache.swift */,
+				2025 /* MetalRenderer.swift */,
+				2026 /* MetalCanvasView.swift */,
+				2027 /* CanvasCoordinateTransform.swift */,
+				2028 /* OneEuroFilter.swift */,
+				2029 /* GeometrySnapper.swift */,
+				2030 /* AlignmentEngine.swift */,
+				2031 /* CanvasInputHandler.swift */,
+				2032 /* SlateCanvasNSView.swift */,
+				2033 /* MinimapView.swift */,
+				2034 /* RulersView.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		0106 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				2035 /* CanvasTool.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		0107 /* TextToVisualGuide */ = {
+			isa = PBXGroup;
+			children = (
+				2036 /* TextGuideParser.swift */,
+				2037 /* GuideLayoutEngine.swift */,
+				2038 /* PresentationManager.swift */,
+			);
+			path = TextToVisualGuide;
+			sourceTree = "<group>";
+		};
+		0108 /* CameraTracking */ = {
+			isa = PBXGroup;
+			children = (
+				2039 /* CameraTrackingProtocol.swift */,
+				2040 /* HSVColorFilter.swift */,
+				2041 /* BlobDetector.swift */,
+				2042 /* GestureStateMachine.swift */,
+				2043 /* CameraCalibration.swift */,
+				2044 /* CameraManager.swift */,
+				2045 /* CameraPiPView.swift */,
+			);
+			path = CameraTracking;
+			sourceTree = "<group>";
+		};
+		0109 /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				2046 /* PNGExporter.swift */,
+				2047 /* PDFExporter.swift */,
+				2048 /* SVGExporter.swift */,
+				2049 /* ClipboardManager.swift */,
+			);
+			path = Export;
+			sourceTree = "<group>";
+		};
+		0110 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2050 /* StyleConstants.swift */,
+				2051 /* FloatingToolbar.swift */,
+				2052 /* InspectorPanel.swift */,
+				2053 /* CommandPalette.swift */,
+				2054 /* BoardLibraryView.swift */,
+				2055 /* SnapshotHistoryView.swift */,
+				2056 /* CameraSettingsModal.swift */,
+				2057 /* KeyboardCheatSheetModal.swift */,
+				2058 /* PresentationOverlayView.swift */,
+				2059 /* MainView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		0111 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2060 /* Assets.xcassets */,
+				2066 /* Info.plist */,
+				2067 /* Slate.entitlements */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0004 /* SlateTests */ = {
+			isa = PBXGroup;
+			children = (
+				2061 /* ModelTests.swift */,
+				2062 /* ParserTests.swift */,
+				2063 /* GestureStateMachineTests.swift */,
+				2064 /* PersistenceTests.swift */,
+				2065 /* SnappingTests.swift */,
+			);
+			path = SlateTests;
+			sourceTree = "<group>";
+		};
+		0005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4001 /* Slate.app */,
+				4002 /* SlateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4001 /* Slate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6001 /* Build configuration list for PBXNativeTarget "Slate" */;
+			buildPhases = (
+				5001 /* Frameworks */,
+				7001 /* Sources */,
+				7002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Slate;
+			productName = Slate;
+			productReference = 4001 /* Slate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4002 /* SlateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6002 /* Build configuration list for PBXNativeTarget "SlateTests" */;
+			buildPhases = (
+				5002 /* Frameworks */,
+				7003 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8001 /* PBXTargetDependency */,
+			);
+			name = SlateTests;
+			productName = SlateTests;
+			productReference = 4002 /* SlateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					4001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					4002 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 4001;
+					};
+				};
+			};
+			buildConfigurationList = 6000 /* Build configuration list for PBXProject "Slate" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0002;
+			productRefGroup = 0005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4001 /* Slate */,
+				4002 /* SlateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1060 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1001 /* SlateApp.swift in Sources */,
+				1002 /* MenuCommands.swift in Sources */,
+				1003 /* Point2D.swift in Sources */,
+				1004 /* ColorData.swift in Sources */,
+				1005 /* Stroke.swift in Sources */,
+				1006 /* ShapeElement.swift in Sources */,
+				1007 /* TextElement.swift in Sources */,
+				1008 /* StickyNoteElement.swift in Sources */,
+				1009 /* ConnectorElement.swift in Sources */,
+				1010 /* FrameElement.swift in Sources */,
+				1011 /* ImageElement.swift in Sources */,
+				1012 /* LaserPoint.swift in Sources */,
+				1013 /* CanvasElement.swift in Sources */,
+				1014 /* BoardMetadata.swift in Sources */,
+				1015 /* Snapshot.swift in Sources */,
+				1016 /* SlateDocument.swift in Sources */,
+				1017 /* SlatePackage.swift in Sources */,
+				1018 /* DocumentStore.swift in Sources */,
+				1019 /* AutosaveManager.swift in Sources */,
+				1020 /* UndoCommand.swift in Sources */,
+				1021 /* UndoManagerEngine.swift in Sources */,
+				1022 /* Shaders.metal in Sources */,
+				1023 /* StrokeTessellator.swift in Sources */,
+				1024 /* TileCache.swift in Sources */,
+				1025 /* MetalRenderer.swift in Sources */,
+				1026 /* MetalCanvasView.swift in Sources */,
+				1027 /* CanvasCoordinateTransform.swift in Sources */,
+				1028 /* OneEuroFilter.swift in Sources */,
+				1029 /* GeometrySnapper.swift in Sources */,
+				1030 /* AlignmentEngine.swift in Sources */,
+				1031 /* CanvasInputHandler.swift in Sources */,
+				1032 /* SlateCanvasNSView.swift in Sources */,
+				1033 /* MinimapView.swift in Sources */,
+				1034 /* RulersView.swift in Sources */,
+				1035 /* CanvasTool.swift in Sources */,
+				1036 /* TextGuideParser.swift in Sources */,
+				1037 /* GuideLayoutEngine.swift in Sources */,
+				1038 /* PresentationManager.swift in Sources */,
+				1039 /* CameraTrackingProtocol.swift in Sources */,
+				1040 /* HSVColorFilter.swift in Sources */,
+				1041 /* BlobDetector.swift in Sources */,
+				1042 /* GestureStateMachine.swift in Sources */,
+				1043 /* CameraCalibration.swift in Sources */,
+				1044 /* CameraManager.swift in Sources */,
+				1045 /* CameraPiPView.swift in Sources */,
+				1046 /* PNGExporter.swift in Sources */,
+				1047 /* PDFExporter.swift in Sources */,
+				1048 /* SVGExporter.swift in Sources */,
+				1049 /* ClipboardManager.swift in Sources */,
+				1050 /* StyleConstants.swift in Sources */,
+				1051 /* FloatingToolbar.swift in Sources */,
+				1052 /* InspectorPanel.swift in Sources */,
+				1053 /* CommandPalette.swift in Sources */,
+				1054 /* BoardLibraryView.swift in Sources */,
+				1055 /* SnapshotHistoryView.swift in Sources */,
+				1056 /* CameraSettingsModal.swift in Sources */,
+				1057 /* KeyboardCheatSheetModal.swift in Sources */,
+				1058 /* PresentationOverlayView.swift in Sources */,
+				1059 /* MainView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7003 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1061 /* ModelTests.swift in Sources */,
+				1062 /* ParserTests.swift in Sources */,
+				1063 /* GestureStateMachineTests.swift in Sources */,
+				1064 /* PersistenceTests.swift in Sources */,
+				1065 /* SnappingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4001 /* Slate */;
+			targetProxy = 3001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDEFINED_VARIABLES = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		9002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDEFINED_VARIABLES = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = "wholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		9003 /* Debug Target Slate */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Slate/Resources/Slate.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Slate/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slate.whiteboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		9004 /* Release Target Slate */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Slate/Resources/Slate.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Slate/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slate.whiteboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		9005 /* Debug Target SlateTests */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slate.SlateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Slate.app/Contents/MacOS/Slate";
+			};
+			name = Debug;
+		};
+		9006 /* Release Target SlateTests */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slate.SlateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Slate.app/Contents/MacOS/Slate";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6000 /* Build configuration list for PBXProject "Slate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9001 /* Debug */,
+				9002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6001 /* Build configuration list for PBXNativeTarget "Slate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9003 /* Debug */,
+				9004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6002 /* Build configuration list for PBXNativeTarget "SlateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9005 /* Debug */,
+				9006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 0001 /* Project object */;
+}
